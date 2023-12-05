@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+}
+
+p {
+  margin: 0;
+}
+
+.text-updater-node {
+  position: relative;
+}
+
+.dndflow {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.dndflow aside {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 12px;
+  border: 1px solid #D7D7D7;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.dndflow aside .divider {
+  height: 64px;
+  width: 1px;
+  background-color: #D7D7D7;
+}
+
+.dndflow aside .description {
+  margin-bottom: 10px;
+}
+
+.dndflow .dndnode {
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+.dndnode:hover, .control-item:hover {
+  transition: all ease-in .3s;
+  background-color: #EDEDED;
+}
+
+.dndflow .dndnode.input {
+  border-color: #0041d0;
+}
+
+.dndflow .dndnode.output {
+  border-color: #ff0072;
+}
+
+.dndflow .reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.dndflow .selectall {
+  margin-top: 10px;
+}
+
+.text-updater-node {
+  display: flex;
+  align-items: center;
+  width: 312px;
+  height: 50px;
+  padding: 5px;
+  
+  border-radius: 12px;
+  border: 1px solid #d7d7d7;
+  background: white;
+}
+  
+.text-updater-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+}
+
+.node-controls {
+  display: flex;
+  width: fit-content;
+  gap: 8px;
+  padding: 4px;
+  margin-bottom: 8px;
+
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.control-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.control-icon {
+  display: block;
+}
+
+.control-item:has(.control-icon-current) {
+  background-color: #437EF7;
+}
+
+.node-body {
+  width: 100%;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.node-body > div {
+  display: flex;
+}
+  
+.drop-down-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 8px;
+
+  font-weight: 600;
+}
+
+.chevron-container {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.chevron {
+  margin: auto;
+  width: 12px;
+  height: 6px;
+}
+
+.icon-node {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+ 
+  border-radius: 12px;
+  border: 1px solid #d7d7d7;
+  background: white;
+}
+
+.icon-dropdown-list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  top: 8px;
+  padding: 8px;
+
+  transition: all ease-in-out .2s;
+}
+
+.icon-dropdown-list:hover {
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 16px 0px #76767640;
+}
+
+.client-dropdown {
+  position: relative;
+}
+
+.dropdown-body {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 306px;
+  top: 66px;
+  left: -13px;
+  padding: 8px 0px 12px 16px;
+
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #fff;
+}
+
+#clientDropdown {
+  border-color: #437EF7;
+}
+
+.title-block {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  padding: 8px 8px 8px 8px;
+}
+
+.item-title {
+  padding-right: 16px;
+}
+
+.subdropdown {
+  /* display: none; */
+}
+
+.subdropdown-item {
+  padding: 8px 16px;
+}
+
+.title-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.subdropdown-item {
+  margin: 0;
+}
+
+.subdropdown-item-text {
+  font-size: 16px;
+}
+
+.title-block,
+.subdropdown-item {
+  border-radius: 4px;
+}
+
+.title-block:hover,
+.subdropdown-item:hover {
+  background-color: #EDEDED;
+}
+
+.dropdown-divider {
+  width: 100%;
+  height: 1px;
+
+  background-color: #E8E8E8;
+}
+
+/* .icon-dropdown-list:hover > .icon-item {
+  display: flex;
+} */
+
+.icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  
+  border-radius: 4px;
+  background-color: #F77943;
+  
+}
+
+.icon-item-show {
+  display: flex;
+}
+
+.icon-node-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* CLIENT INPUT */
+
+.clientInput {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.clientInput input {
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid #D7D7D7;
+}
+
+.clientInput input[type=text]:focus {
+  border: 1px solid #437EF7;
+}
